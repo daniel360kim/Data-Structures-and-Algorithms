@@ -1,3 +1,6 @@
+#ifndef TEMPLATE_HPP
+#define TEMPLATE_HPP
+
 template<typename E>
 class SLinkedList;
 
@@ -66,3 +69,4 @@ void SLinkedList<E>::removeFront()
 }
 
 
+#endif // TEMPLATE_HPP

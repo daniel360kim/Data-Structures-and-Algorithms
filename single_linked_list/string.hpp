@@ -1,3 +1,6 @@
+#ifndef STRING_HPP
+#define STRING_HPP
+
 #include <string>
 
 class StringNode
@@ -55,3 +58,5 @@ void StringLinkedList::removeFront()
     head = old->next;
     delete old;
 }
+
+#endif

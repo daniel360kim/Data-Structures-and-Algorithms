@@ -1,5 +1,8 @@
 //Cannot modify inner parts of the list....yet....
 
+#ifndef DOUBLE_LINKED_LIST_HPP
+#define DOUBLE_LINKED_LIST_HPP
+
 template <typename T>
 class DoubleLinkedList;
 
@@ -125,3 +128,5 @@ void DoubleLinkedList<T>::removeBack()
 {
     remove(tail->prev);
 }
+
+#endif
