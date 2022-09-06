@@ -1,10 +1,10 @@
 //finds minimum value in an array
 
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <iomanip>
 
-int min_array(int a[], int n)
+//Simple version
+int findsum(int a[], int n)
 {
     if(n == 1)
     {
@@ -12,17 +12,32 @@ int min_array(int a[], int n)
     }
     else
     {
-        return std::min(a[n-1], min_array(a, n-1));   
+        return a[n - 1] + findsum(a, n - 1);
+    }
+}
+
+//Templated version
+template <typename T>
+T cumsum(T a[], int n)
+{
+    if(n == 1)
+    {
+        return a[0];
+    }
+    else
+    {
+        return a[n - 1] + cumsum<T>(a, n - 1);
     }
 }
 
 
+/* Simple Test */
 int main(int argc, char const *argv[])
 {
-    int a[5] = { 5, 6, 300, 2, 80 };
+    double numbers[5] = { 1.31232, 1.51236, 1.88434, 7.9227, 13.13862 };
 
-    std::cout << min_array(a, 5);
 
+    std::cout << "Sum is: " << cumsum<double>(numbers, 5);
 
    
     return 0;
