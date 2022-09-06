@@ -1,6 +1,7 @@
 //finds minimum value in an array
 
 #include <iostream>
+#include <vector>
 #include <algorithm>
 
 int min_array(int a[], int n)
