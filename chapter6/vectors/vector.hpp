@@ -16,7 +16,7 @@ public:
     int size() const;
     bool empty() const;
     T& operator[](int i);
-    T& at(int i) throw (std::out_of_range);
+    T& at(int i);
     void erase(int i);
     void insert(int i, const T& e);
     void reserve(int N);
@@ -48,7 +48,7 @@ T& ArrayVector<T>::operator[](int i)
 }
 
 template <typename T>
-T& ArrayVector<T>::at(int i) 
+T& ArrayVector<T>::at(int i)
 {
     if (i < 0 || i >= size())
         throw std::out_of_range("Index out of range");
